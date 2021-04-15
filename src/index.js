@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './index.scss';
+import ControlSystem from './ControlSystem';
 import reportWebVitals from './reportWebVitals';
+
+//Bootstrap
+import 'bootstrap/scss/bootstrap.scss' //para sass
+import 'bootstrap/dist/css/bootstrap.min.css' // para css
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ControlSystem />
   </React.StrictMode>,
   document.getElementById('root')
 );
