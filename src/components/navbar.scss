@@ -1,0 +1,17 @@
+.navBarLinks{
+    color: white;
+}
+
+.navBarLinks:hover{
+    color: white;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbarItem{
+    display: flex;
+    justify-content: flex-end;
+}
