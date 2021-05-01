@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # OperationsSupportSystem_front-end
 the front-end part of the OSS
 =======
@@ -73,3 +74,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 >>>>>>> a381c52 (Initialize project using Create React App)
+=======
+# Modifications to the README file
+
+## For This Section
+
+> We will be making a README.md file with the run or compile instructions
+
+> Please take a look for the Sweet Alert and Toastr NPM libraries 
+>>>>>>> 2ebad0951122d0cae37939cf060c6675e97024cb
