@@ -3,7 +3,10 @@ import TheNavbar from '../components/TheNavbar'
 import useForm from '../hooks/useForm'
 import axios from 'axios'
 import {useHistory} from 'react-router-dom'
-import { Form, Button } from 'react-bootstrap'
+
+
+import { Form, Row, Col } from 'react-bootstrap'
+import './views.scss'
 
 function SignUp() {
     const history = useHistory()
@@ -16,7 +19,6 @@ function SignUp() {
                     if (response.status === 201 || response.status === 200) {
                         alert('Usuario Creado')
                         history.push('/login')
-                        console.log(response)
                     }
                 }).catch((error) => {
                     alert(error.message)
@@ -29,31 +31,41 @@ function SignUp() {
     return (
         <div>
             <TheNavbar />
-            <div className="container mt-5">
-                <Form onSubmit ={handleSubmit}>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Nombre</Form.Label>
+            <div className="container mt-5" id="containerView">
+                <Form onSubmit ={handleSubmit} id="form">
+                    <Form.Group as={Row} controlId="formBasicEmail" className="formGroup">
+                        <Form.Label column sm="2">Nombre</Form.Label>
+                        <Col sm="10">
                         <Form.Control type="text" placeholder="Enter email" onChange={handleChange} name="first_name" value={inputs.first_name}/>
+                        </Col>
                     </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Apellido</Form.Label>
+                    <Form.Group controlId="formBasicEmail" as={Row} className="formGroup">
+                        <Form.Label column sm="2">Apellido</Form.Label>
+                        <Col sm="10">
                         <Form.Control type="text" placeholder="Enter email" onChange={handleChange} name="last_name" value={inputs.last_name}/>
+                        </Col>
                     </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email</Form.Label>
+                    <Form.Group controlId="formBasicEmail" as={Row} className="formGroup">
+                        <Form.Label column sm="2">Email</Form.Label>
+                        <Col sm="10">
                         <Form.Control type="email" placeholder="Enter email" onChange={handleChange} name="email" value={inputs.email}/>
+                        </Col>
                     </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Contraseña</Form.Label>
+                    <Form.Group controlId="formBasicEmail" as={Row} className="formGroup">
+                        <Form.Label column sm="2">Contraseña</Form.Label>
+                        <Col sm="10">
                         <Form.Control type="password" placeholder="Enter email" onChange={handleChange} name="password" value={inputs.password}/>
+                        </Col>
                     </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Confirma Contraseña</Form.Label>
+                    <Form.Group controlId="formBasicEmail" as={Row} className="formGroup">
+                        <Form.Label column sm="2">Confirma Contraseña</Form.Label>
+                        <Col sm="10">
                         <Form.Control type="password" placeholder="Enter email" onChange={handleChange} name="password_confirm" value={inputs.password_confirm}/>
+                        </Col>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
+                    <button type="submit" className="button btn-lg">
+                        Sign Up
+                    </button>
                 </Form>
             </div>
         </div>
